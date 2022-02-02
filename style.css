@@ -12,6 +12,9 @@
   margin: 0;
 }
 
+html {
+background-color: #e8e1f3;
+}
 
 
 body {
@@ -120,16 +123,30 @@ body {
   }
 
 
+
+
+
 input#sizer {
   width: 20rem;
   align-self: center;
   -webkit-appearance: none;
   appearance: none;
-  background: blanchedalmond;
+  background: rgb(211, 155, 71);
   outline: none;  
   opacity: 0.7;
   -webkit-transition: .2s;
   transition: opacity .2s;
+  grid-area: sl;
+  pad: 1rem;
+}
+
+
+
+.slideVal {
+  text-align: center;
+  font-weight: 700px;
+  font-size: 26px;
+  color: rgb(75, 132, 134);
 }
 
 

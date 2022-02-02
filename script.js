@@ -1,11 +1,13 @@
 const mainGrid = document.querySelector('div.grid');
 const slider = document.querySelector('input#sizer');
+const sliderText = document.querySelector('p.slideVal');
 const colorButton = document.getElementById('colorMode');
 const eraserButton = document.getElementById('eraserMode');
 const rainbowButton = document.getElementById('rainbowMode');
 const clearButton = document.getElementById('clearButton');
 const defaultButton = document.getElementById('defaultButton');
 const colorPicker = document.getElementById('colorPicker');
+
 
 
 
@@ -36,6 +38,11 @@ function PopulateGrid(gridSize) {
 
 function clearGrid() {
     mainGrid.innerHTML = '';
+}
+
+function updateP()
+{
+    sliderText.innerHTML = `${slider.value} x ${slider.value}`
 }
 
 
@@ -100,5 +107,6 @@ rainbowButton.addEventListener('click', () => {mode='rainbow'});
 eraserButton.addEventListener('click', () => {mode='eraser'});
 slider.addEventListener('mouseup', initializeGrid);
 colorPicker.addEventListener('change', () => {pickedColor = colorPicker.value});
+slider.addEventListener('input', updateP)
 
 initializeGrid();
